@@ -5,11 +5,19 @@ from ..services.location.nyt import NYTLocationService
 
 
 class DataSourceSingleton:
+    # variable storing the ONLY (if any) DataSourceSingle instance
     _instance = None
 
     def __new__(self):
-        # creates new DataSourceSingleton instance iff one does not exist.
-        # Then returns the new/existing instance
+        """
+        Creates new DataSourceSingleton instance iff one does not exist.
+        Otherwise, existing instance is used.
+        Then returns the new/existing instance.
+
+        :returns: new/existing instance of DataSourceSingleton object.
+        :rtype: DataSourceSingleton
+        """
+
         if not DataSourceSingleton._instance:
             DataSourceSingleton._instance = super(
                 DataSourceSingleton, self).__new__(self)
