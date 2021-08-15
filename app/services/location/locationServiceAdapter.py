@@ -1,17 +1,10 @@
 from services.location import LocationService
 
-"""
-Implement Adapter method for LocationService
-"""
-
 
 class Adapter (LocationService):
-    # def __init__(self):
-    #     self.locations
-
-    # async def get_locations(self):
-    #     self.locations = await LocationService.get_locations()
-
+    """
+    Adapter that retrieves locations from data source (jhu, csbs, nyt)
+    """
     async def get_all(self):
         # Get the locations.
         locations = await LocationService.get_locations()
