@@ -5,6 +5,10 @@ from ..services.location.nyt import NYTLocationService
 
 
 class DataSourceSingleton:
+    """
+    Singleton class used for storing and retrieving Data Sources
+    """
+
     # variable storing the ONLY (if any) DataSourceSingle instance
     _instance = None
 
