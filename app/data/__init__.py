@@ -1,4 +1,5 @@
 """app.data"""
+from app.services.location.locationServiceAdapter import Adapter
 from ..services.location.csbs import CSBSLocationService
 from ..services.location.jhu import JhuLocationService
 from ..services.location.nyt import NYTLocationService
@@ -18,4 +19,5 @@ def data_source(source):
     :returns: The service.
     :rtype: LocationService
     """
-    return DATA_SOURCES.get(source.lower())
+
+    return Adapter(DATA_SOURCES.get(source.lower()))
