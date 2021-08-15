@@ -34,6 +34,12 @@ class DataSourceSingleton:
             }
         return DataSourceSingleton._instance
 
+    def get_data_sources(self):
+        """
+        retrieves and returns _DATA_SOURCES dictionary 
+        """
+        return self._DATA_SOURCES
+
 
 def data_source(source):
     """

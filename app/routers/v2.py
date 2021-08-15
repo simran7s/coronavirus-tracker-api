@@ -108,4 +108,4 @@ async def sources():
     Retrieves a list of data-sources that are availble to use.
     """
     storedSources = DataSourceSingleton()
-    return {"sources": list(storedSources._DATA_SOURCES.keys())}
+    return {"sources": list((storedSources.get_data_sources()).keys())}
