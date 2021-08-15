@@ -49,4 +49,4 @@ def data_source(source):
     :rtype: LocationService
     """
     storedSources = DataSourceSingleton()
-    return storedSources._DATA_SOURCES.get(source.lower())
+    return (storedSources.get_data_sources).get(source.lower())
