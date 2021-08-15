@@ -11,7 +11,6 @@ from ...coordinates import Coordinates
 from ...location.nyt import NYTLocation
 from ...models import Timeline
 from ...utils import httputils
-from . import LocationService
 
 LOGGER = logging.getLogger("services.location.nyt")
 
@@ -19,7 +18,7 @@ LOGGER = logging.getLogger("services.location.nyt")
 BASE_URL = "https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv"
 
 
-class NYTLocationService(LocationService):
+class NYTLocationService():
     """
     Service for retrieving locations from New York Times (https://github.com/nytimes/covid-19-data).
     """

@@ -18,7 +18,7 @@ LOGGER = logging.getLogger("services.location.csbs")
 BASE_URL = "https://facts.csbs.org/covid-19/covid19_county.csv"
 
 
-class CSBSLocationService(LocationService):
+class CSBSLocationService():
     """
     Service for retrieving locations from csbs
     """

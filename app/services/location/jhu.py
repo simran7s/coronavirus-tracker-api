@@ -24,7 +24,7 @@ PID = os.getpid()
 BASE_URL = "https://raw.githubusercontent.com/CSSEGISandData/2019-nCoV/master/csse_covid_19_data/csse_covid_19_time_series/"
 
 
-class JhuLocationService(LocationService):
+class JhuLocationService():
     """
     Service for retrieving locations from Johns Hopkins CSSE (https://github.com/CSSEGISandData/COVID-19).
     """
